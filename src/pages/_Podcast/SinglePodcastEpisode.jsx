@@ -73,7 +73,7 @@ export default function SingleEpisode() {
               <h1 className="text-2xl font-bold mb-4">{singlePodcast?.title}</h1>
               {/* <p className="text-gray-600">{singlePodcast?.summary}</p> */}
               <div 
-                dangerouslySetInnerHTML={{ __html: singlePodcast?.summary?.slice(0,100) }}
+                dangerouslySetInnerHTML={{ __html: singlePodcast?.summary?.slice(0,80) }}
                 className=" text-gray-600"
               />
             </div>
