@@ -36,9 +36,10 @@ export const UseCampaignStore = create((set, get) => ({
 		set({ loading: true });
 
 		try {
+			//const res = await axiosInstance.get("/get-crowedFundings");
 			const res = await axiosInstance.get("/get-crowedFundings");
 			set({  loading: false,  campaignData: res.data.results});
-			console.log("All Blog result",res)
+			console.log("All Campaign result",res)
 			//toast.success(res.data.message);
 		} catch (error) {
 			set({ error: error.response?.data?.message || "Error Fetching Campaigns", loading: false });
@@ -96,11 +97,25 @@ export const UseCampaignStore = create((set, get) => ({
 		}
 	},
 
-    deleteCampaign: async ({id}) => {
+    /* deleteCampaign: async ({id}) => {
 		set({ loading: true });
 
 		try {
 			const res = await axiosInstance.delete(`/delete-crowedFunding/${id}`);
+			set({  loading: false });
+			console.log("deleted campaign")
+			toast.success(res.data.message);
+		} catch (error) {
+			set({ error: error.response?.data?.message || "Error deleting campaign", loading: false });
+			console.log(error);
+			toast.error(error.response.data.message || "An error occurred");
+		}
+	}, */
+    deleteCampaign: async ({id}) => {
+		set({ loading: true });
+
+		try {
+			const res = await axiosInstance.delete(`/soft-delete-crowedFunding/${id}`);
 			set({  loading: false });
 			console.log("deleted campaign")
 			toast.success(res.data.message);

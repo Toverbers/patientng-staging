@@ -48,6 +48,8 @@ export default function AllCampaigns() {
     
   },[])
 
+  const filteredCampaign = campaignData?.filter(campaign => campaign?.status === 'active');
+
 
   /* const handleLike = (id, isTrending = false) => {
     const updateCampaigns = (prevCampaigns) =>
@@ -154,7 +156,7 @@ export default function AllCampaigns() {
             {/* All Campaigns section */}
             <div className="lg:w-3/4 ">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {campaignData?.map((campaign, index) => (
+                {filteredCampaign?.map((campaign, index) => (
                   <CampaignCard
                     key={index}
                     campaign={campaign}

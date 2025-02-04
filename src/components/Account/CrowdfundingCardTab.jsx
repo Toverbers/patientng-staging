@@ -43,11 +43,15 @@ export default function CrowdfundingCardTab({
 }) {
   const progressPercentage = (amountRaised / goal) * 100
 
-  const {getUserCampaign, userCampaign} = UseCampaignStore()
+  const {getUserCampaign, userCampaign, deleteCampaign} = UseCampaignStore()
 
   useEffect(()=> {
     getUserCampaign({id: userId})
   },[])
+
+  const handleDeleteCampaign = async (id) => {
+   await deleteCampaign({id: id})
+  }
 
  console.log("user Campaign", userCampaign)
   //console.log("user ID", userId)
@@ -81,7 +85,7 @@ export default function CrowdfundingCardTab({
           <Button 
             variant="destructive" 
             size="sm" 
-            onClick={onDelete}
+            onClick={()=> handleDeleteCampaign(userCampaign?._id)}
           >
             Delete campaign
           </Button>

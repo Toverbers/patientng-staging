@@ -52,7 +52,7 @@ const SocialShare = () => (
 const CommentForm = ({onClick, myData, ...props}) => (
   <div className="flex gap-4">
     
-    <img crossOrigin='anonymous' src={ myData?.image? `${import.meta.env.VITE_MAIN_URL}/${myData?.image}`: '/user.png'} className="h-8 w-8 rounded-full" />   
+    <img crossOrigin='anonymous' src={ myData?.image? `${import.meta.env.VITE_MAIN_URL}/${myData?.image}`: '/user.png'} className="h-6 w-6 rounded-full" />   
       
     <div className="flex items-center space-x-2 flex-1">
     

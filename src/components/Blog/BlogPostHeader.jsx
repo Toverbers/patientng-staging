@@ -37,7 +37,7 @@ export default function BlogPostHeader({blogData}) {
             initial="initial" 
             className="flex items-center gap-3 pt-2">
               <Avatar className="h-10 w-10">
-                <img crossOrigin='anonymous' src={`${import.meta.env.VITE_MAIN_URL}/${blogData?.publisherImage}`} alt="image" />
+                <img crossOrigin='anonymous' src={`${import.meta.env.VITE_MAIN_URL}/${blogData?.blog?.publisherImage}`} alt="image" />
                 <AvatarFallback>{blogData?.blog?.publisher?.slice(0,1)}</AvatarFallback>
               </Avatar>
               <div className="flex flex-col">

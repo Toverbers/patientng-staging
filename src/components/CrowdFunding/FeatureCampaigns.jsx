@@ -94,6 +94,8 @@ const FeaturedCampaigns = () => {
     getAllCampaigns()
   },[])
 
+  const filteredCampaign = campaignData?.filter(campaign => campaign?.status === 'active');
+
   console.log("ALL CAMPAINGS", campaignData)
 
     const [campaigns, setCampaigns] = useState([
@@ -175,7 +177,7 @@ const FeaturedCampaigns = () => {
           Discover compelling cases and donate Green-Heart likes to promote campaigns that resonate with you.
         </motion.p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {campaignData?.slice(0, 3).map((campaign, index) => (
+          {filteredCampaign?.slice(0, 3).map((campaign, index) => (
             <CampaignCard key={index} campaign={campaign} onLike={() => handleLike(campaign?._id)} />
           ))}
         </div>
