@@ -40,9 +40,9 @@ const duration = [
 ]
 
 const categories = [
-  "Category 1",
-  "Category 2",
-  "Category 3",
+  "Medical expenses",
+  "Wellness",
+  "Diseases",
 ]
 
 const FundraiserDetailsForm = ({ formData, updateFormData }) => {
@@ -157,7 +157,7 @@ const FundraiserDetailsForm = ({ formData, updateFormData }) => {
             </label>
             <Select value={formData.categories} onValueChange={handleCategoryChange}>
               <SelectTrigger>
-                <SelectValue placeholder="Category 1" />
+                <SelectValue placeholder="Category" />
               </SelectTrigger>
               <SelectContent>
                 {categories.map((category) => (

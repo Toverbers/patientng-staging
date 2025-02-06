@@ -81,7 +81,7 @@ export default function SingleEpisode() {
 
           {/* Audio Player */}
           <div className="space-y-4">
-            <div><iframe src={singlePodcast?.channels[0].link} width="100%" height="500px" title="Dynamic Iframe"></iframe></div>
+            <div><iframe src={singlePodcast?.channels[0].link} width="100%" height="350px" title="Dynamic Iframe"></iframe></div>
             {/* <div className="bg-gray-100 h-1 rounded-full overflow-hidden">
               <div className="bg-emerald-500 h-full w-1/3"></div>
             </div> */}

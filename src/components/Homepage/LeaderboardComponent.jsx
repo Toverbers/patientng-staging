@@ -103,6 +103,8 @@ const {getAllCampaigns, campaignData} = UseCampaignStore()
     getAllCampaigns()
   },[])
 
+  const filteredCampaign = campaignData?.filter(campaign => campaign?.status === 'active');
+
   /* const getTop5Users = (userList) => {
     // Sort users by likes in descending order
     const sortedUsers = [...userList].sort((a, b) => b.likes?.length - a.likes?.length);
@@ -125,7 +127,7 @@ const {getAllCampaigns, campaignData} = UseCampaignStore()
   };
   
   // Example usage
-  const topCampaings = getTop5Users(campaignData); 
+  const topCampaings = getTop5Users(filteredCampaign); 
   //console.log("TOP 5 CAMPAIGNS",topCampaings);
 
   return (

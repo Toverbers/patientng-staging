@@ -35,7 +35,7 @@ export const ContactUsSection = () => {
                 whileInView={"animate"}
                 initial="initial"  
                 className=''>
-                    <img src='/Light mode.png' alt='site image' className='w-[500px] object-cover'/>
+                    <img src='/Light-mode.png' alt='site image' className='md:max-w-[500px] object-cover'/>
                 </motion.div>
             </div>
         </div>

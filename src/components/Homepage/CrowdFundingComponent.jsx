@@ -59,6 +59,8 @@ useEffect(()=> {
     getAllCampaigns()
   },[])
 
+  const filteredCampaign = campaignData?.filter(campaign => campaign?.status === 'active');
+
   const handleLike = (id) => {
     setCampaigns(prevCampaigns =>
       prevCampaigns.map(campaign =>
@@ -175,7 +177,7 @@ useEffect(()=> {
               </Card>
             ))} */}
 
-         {campaignData?.slice(0, 3).map((campaign, index) => (
+         {filteredCampaign?.slice(0, 3).map((campaign, index) => (
             <CampaignCard 
             key={index} campaign={campaign} onLike={() => handleLike(campaign?._id)} />
           ))}

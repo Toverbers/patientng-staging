@@ -98,7 +98,7 @@ export default function AllCampaigns() {
   };
   
   // Example usage
-  const topCampaings = getTop5Users(campaignData);
+  const topCampaings = getTop5Users(filteredCampaign);
   //console.log("TOP 5 CAMPAIGNS",topCampaings);
   
 

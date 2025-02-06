@@ -206,7 +206,7 @@ export default function BlogHome() {
               key={category?._id}
               onClick={() => setSelectedCategory(category?.name)}
               //onChange={() => handleCategoryChange(category?.name)}
-              className={`text-sm px-3 py-1 rounded-full ${
+              className={`text-sm px-3 py-1 rounded-full capitalize ${
                 selectedCategory === category?.name
                   ? 'bg-emerald-500 text-white'
                   : 'bg-gray-100 hover:bg-gray-200'
