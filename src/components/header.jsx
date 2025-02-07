@@ -101,7 +101,8 @@ const Header = ({ isLoggedIn }) => {
     <header className="container border-b bg-yellow-400 z-50">
       <div className="w-full mx-auto flex h-16 items-center justify-between px-4 bg-white fixed z-30">
         <Link to="/" className="flex items-center gap-2 group">
-          <Logo />
+          {/* <Logo /> */}
+          <img src="/logo.png" className="w-10" />
           <span className="text-xl font-semibold">Patient.ng</span>
         </Link>
 

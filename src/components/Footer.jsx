@@ -107,7 +107,8 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
           {/* Left section */}
           <div className="flex items-center gap-2">
-            <Logo />
+            {/* <Logo /> */}
+            <img src="/logo.png" className="w-8" />
             <span className="text-lg font-semibold">Patient.ng</span>
           </div>
 
