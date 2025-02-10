@@ -14,7 +14,7 @@ const HeroSection = () => {
       {/* Hero Content */}
       <div className="w-full px-4 pb-24 pt-10 md:pt-12 z-10">
         {/* Text Content */}
-        <div className="mx-auto max-w-[800px] text-center">
+        <div className="mx-auto max-w-[900px] text-center">
           <motion.h1
           variants={SlideDown(0.1)}
           whileInView={"animate"}
@@ -28,7 +28,7 @@ const HeroSection = () => {
            variants={SlideLeft(0.1)}
            whileInView={"animate"}
            initial="initial" 
-          className="mx-auto mt-6 max-w-[600px] text-gray-600 md:text-lg">
+          className="mx-auto mt-6 max-w-[800px] text-gray-600 md:text-lg">
           Discover our advocacy-driven platform, where members can launch patient campaigns that transform passive community engagement into active patient support.
           </motion.p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

@@ -1,12 +1,17 @@
 import { UseCampaignStore } from '@/store/campaignStore'
-import React, { createContext, useContext, useState } from 'react'
+import  { createContext, useContext, useState } from 'react'
+
 
 const FundraiserFormContext = createContext()
 
 export const useFundraiserForm = () => useContext(FundraiserFormContext)
 
 export const FundraiserFormProvider = ({ children }) => {
-  const {createCampaign} = UseCampaignStore()
+  const {createCampaign, } = UseCampaignStore()
+  
+
+  
+
   const [formData, setFormData] = useState({
     coverImage: null,
     title: '',

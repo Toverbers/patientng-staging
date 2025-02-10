@@ -75,13 +75,13 @@ export default function CrowdfundingCardTab({
           </Badge>
         </div>
         <div className="absolute top-4 right-4 flex gap-2">
-          <Button 
+          {/* <Button 
             variant="secondary" 
             size="sm" 
             onClick={onEdit}
           >
             Edit
-          </Button>
+          </Button> */}
           <Button 
             variant="destructive" 
             size="sm" 

@@ -124,7 +124,7 @@ export default function AccountPage() {
                         handleSubmit={handleSubmit}
                     />
                     )}
-                    {activeTab === 'Crowdfunding' && (
+                    {activeTab === 'Campaign' && (
                     <CrowdfundingCardTab
                     userId={myData?._id}
                     status="awaiting_review"

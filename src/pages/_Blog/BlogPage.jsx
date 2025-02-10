@@ -37,7 +37,7 @@ function ArticleCard({ post, featured = false, recent = false }) {
       </Link>
       <div className={`${featured ? '' : 'mt-4'} ${recent ? 'flex-1' : ''}`}>
         {!recent && (
-          <div className="text-emerald-500 text-sm mb-2">{post?.category?.name}</div>
+          <div className="text-emerald-500 text-sm mb-2 capitalize">{post?.category?.name}</div>
         )}
         <Link to={`/blog${post?.urlSlug}`}>
           <h3 className={`font-semibold ${featured ? 'text-2xl' : 'text-lg'} hover:text-emerald-600`}>
@@ -172,7 +172,7 @@ export default function BlogHome() {
         whileInView={"animate"}
         initial="initial" 
         className="text-gray-600 max-w-2xl mx-auto">
-          Explore a collection of relevant news, articles and stories from our experienced  contributors across the country.
+          Explore a collection of relevant news, articles and stories from experienced  contributors across the country.
         </motion.p>
       </div>
 

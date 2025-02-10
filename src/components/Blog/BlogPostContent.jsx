@@ -226,7 +226,7 @@ export default function BlogPostContent({blogData, getBlogs}) {
            {/* Engagement Section */}
            <div className="border-t border-b py-6 my-8">
             <h3 className="font-medium mb-2">Like what you have read?</h3>
-            <p className="text-sm text-gray-600 mb-4">Like or share your thoughts</p>
+            <p className="text-sm text-gray-600 mb-4">Share your thoughts</p>
             <div className="flex gap-4">
               <button 
                 onClick={handleLike}

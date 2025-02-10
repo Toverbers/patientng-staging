@@ -123,9 +123,9 @@ export const LoginPage = () => {
         
 
           <p className="text-sm text-gray-600 text-center">
-             Don't have an account?
+             Don't have an account? 
             <Link to="/signup" className="text-emerald-500 hover:text-emerald-600">
-             Signup
+             {' '}Signup
             </Link>
           </p>
           

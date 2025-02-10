@@ -4,6 +4,7 @@ import { FormInput } from '@/components/FormInput'
 import Header from '@/components/header'
 import FAQSection from '@/components/Homepage/FAQComponent'
 import TextField from '@/components/TextField'
+import { Textarea } from '@/components/ui/textarea'
 import { UseContactStore } from '@/store/contactStore'
 import { Mail, Phone } from 'lucide-react'
 import { useState } from 'react'
@@ -94,11 +95,19 @@ const Contact = () => {
           <FormInput type='number' label="Phone Number" inputClassName="w-full" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} />
          </div>
          <div className='flex items-center'>
-          <TextField title="Message" value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} />
+          <TextField title="Message" rows={4} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} />
+            {/* <Textarea
+                id="complaints"
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                rows={4}
+                required
+                className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:border-emerald-500"
+              /> */}
          </div>
 
          <div className='flex justify-center'>
-         <CustomButton className='bg-emerald-500 text-white w-full' onClick={handleSubmit} >Submit</CustomButton>
+         <CustomButton className='bg-emerald-500 text-white w-full  mt-5' onClick={handleSubmit} >Submit</CustomButton>
          </div>
         </div>
       </div>

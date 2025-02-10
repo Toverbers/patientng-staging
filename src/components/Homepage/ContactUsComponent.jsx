@@ -22,7 +22,7 @@ export const ContactUsSection = () => {
                 whileInView={"animate"}
                 initial="initial" 
                 >
-                    <h2 className='text-4xl text-center'>Launch your campaign now.</h2>
+                    <h2 className='text-4xl text-center'>lunch your campaign today</h2>
                     <p className='text-lg text-center'>
                         We believe in putting patients at the center of their healthcare journey.
                     </p>

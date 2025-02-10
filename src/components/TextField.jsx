@@ -12,6 +12,7 @@ const TextField = ({
   value,
   isDisabled,
   errorMessage,
+  ...props
 }) => {
   return (
     <div className="w-full space-y-1">
@@ -40,6 +41,7 @@ const TextField = ({
           value={value}
           disabled={isDisabled}
           readOnly={isDisabled}
+          {...props}
         />
 
         {suffixIcon && (

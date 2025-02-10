@@ -103,7 +103,7 @@ const Header = ({ isLoggedIn }) => {
         <Link to="/" className="flex items-center gap-2 group">
           {/* <Logo /> */}
           <img src="/logo.png" className="w-10" />
-          <span className="text-xl font-semibold">Patient.ng</span>
+          <span className="text-xl font-semibold text-emerald-500">Patient.ng</span>
         </Link>
 
         {/* Desktop Navigation */}

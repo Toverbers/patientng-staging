@@ -1,12 +1,32 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Card } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Progress } from "@/components/ui/progress"
 import { Checkbox } from '../ui/checkbox'
 import { Label } from '../ui/label'
+import useAuthStore from '@/store/authStore'
+import { UseCampaignStore } from '@/store/campaignStore'
+import { useNavigate } from 'react-router'
+import AlertDialogs from '../AlertDialogs'
 
 const FundraiserReview = ({ formData }) => {
+  const { isCampaign} = UseCampaignStore()
   const { coverImage, title, state, lga, description, beneficiaryType, goal } = formData
+  const {getme, myData} = useAuthStore()
+  const navigate = useNavigate()
+  const [openModal, setOpenModal] = useState(false)
+
+  
+  useEffect(()=> {
+    getme()
+  },[])
+
+  useEffect(() => {
+    if(isCampaign){
+     //navigate('/crowdfunding')
+     setOpenModal(true)
+    }
+   },[isCampaign])
 
   const progress = (0 / goal) * 100
   
@@ -26,11 +46,12 @@ const FundraiserReview = ({ formData }) => {
   }).format(goal || 0)
 
   return (
+    <>
     <Card className="p-6">
       <h2 className="text-xl font-medium mb-6">Review and Submit</h2>
       
       <div className="space-y-6">
-        <h1 className="text-3xl font-bold">{title || 'Save Osaze Odemwinge'}</h1>
+        <h1 className="text-3xl font-bold">{title}</h1>
         
         {/* Cover Image */}
         <div className="aspect-video w-full overflow-hidden rounded-lg bg-gray-100">
@@ -49,14 +70,15 @@ const FundraiserReview = ({ formData }) => {
         <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
           <Avatar>
             <AvatarImage src={organizer.avatar} alt={organizer.name} />
-            <AvatarFallback>{organizer.name[0]}</AvatarFallback>
+            <img crossOrigin='anonymous' src={`${import.meta.env.VITE_MAIN_URL}/${myData?.image}`} alt='checkup' className='object-cover absolute w-full h-full'/>
+            <AvatarFallback>{myData.firstName?.slice(0,1)}</AvatarFallback>
           </Avatar>
-          <p>NAME OF FUND {formData?.firstName}</p>
+          {/* <p> {formData?.firstName} {formData?.lastName}</p> */}
           <p className="text-sm text-gray-600">
-            <span className="font-medium text-gray-900">{organizer.name}</span>
+            <span className="font-medium text-gray-900">{myData.firstName} {myData.lastName}</span>
             {' '}is organising a{' '}
             <span className="text-gray-900">fundraiser on behalf of{' '}</span>
-            <span className="font-medium text-gray-900">{beneficiary}</span>
+            <span className="font-medium text-gray-900">{formData?.firstName} {formData?.lastName}</span>
           </p>
         </div>
 
@@ -87,6 +109,16 @@ const FundraiserReview = ({ formData }) => {
         )}
       </div>
     </Card>
+
+    <AlertDialogs
+     open={openModal}
+     setOpen={()=> setOpenModal(false)}
+     title="Congratulations!!"
+     description="Your campaign has successfully been cretead. Please check your profile anytime soon to know the status of your campaign"
+     handleClick={()=> navigate('/crowdfunding')}
+     />
+    
+    </>
   )
 }
 

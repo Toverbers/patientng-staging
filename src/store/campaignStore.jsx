@@ -6,6 +6,7 @@ export const UseCampaignStore = create((set, get) => ({
     campaignData: null,
 	singleCampaign: null,
 	userCampaign: null,
+	isCampaign: false,
 	loading: false,
 	error: null,
 	message: null,
@@ -22,7 +23,7 @@ export const UseCampaignStore = create((set, get) => ({
 
 		try {
 			const res = await axiosInstance.post("/post-crowedFunding", { title, description, fundraisingFor, accountNumber, accountName, bankCode, bank, state, lga, amountNeeded, image, address }, config);
-			set({  loading: false,  });
+			set({  loading: false, isCampaign: true  });
 			//console.log("Blog result",res.data.result)
 			toast.success(res.data.message);
 		} catch (error) {

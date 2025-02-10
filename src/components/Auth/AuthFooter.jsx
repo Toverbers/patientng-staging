@@ -5,7 +5,7 @@ export default function AuthFooter() {
     <footer className="py-4 text-center text-sm text-gray-500">
       <div className="container mx-auto px-4">
         <p>
-          © 2024 Patient.ng.
+          © 2025 Patient.ng.
         </p>
       </div>
     </footer>

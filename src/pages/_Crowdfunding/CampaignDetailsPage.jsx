@@ -10,7 +10,7 @@ import Header from '@/components/header'
 import Footer from '@/components/Footer'
 import { UseCampaignStore } from '@/store/campaignStore'
 import useAuthStore from '@/store/authStore'
-import { PiHeartFill } from 'react-icons/pi'
+import { PiHeart, PiHeartFill } from 'react-icons/pi'
 
 // Mock data - replace with API call later
 const campaignData = {
@@ -166,7 +166,7 @@ export default function CampaignDetails() {
                   Share
                 </Button>
                 <Button disabled={isAvailable} variant="outline" onClick={handleLike} className="flex-1 flex items-center border-[#10b981] text-[#10b981]">
-                  {isAvailable ? <><PiHeartFill className="h-4 w-4 mr-2 text-[#10b981]" /></> : <><Heart className="h-4 w-4 mr-2" color='' /></>}
+                  {isAvailable ? <><PiHeartFill className="h-4 w-4 mr-2 text-[#10b981]" /></> : <><PiHeart className="h-4 w-4 mr-2 text-[#10b981]" color='' /></>}
                   
                   {singleCampaign?.likes?.length} Likes
                 </Button>

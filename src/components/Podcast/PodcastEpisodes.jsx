@@ -3,7 +3,7 @@ import { Play, Volume2, Rss } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import NewsletterSection from './NewsletterSection'
-import { FaPodcast, FaRss, FaSpotify } from 'react-icons/fa'
+import { FaApple, FaPodcast, FaRss, FaSpotify, FaYoutube } from 'react-icons/fa'
 //import { SiGooglepodcasts } from "react-icons/si";
 import { PiGooglePodcastsLogoBold } from "react-icons/pi";
 import { useNavigate } from 'react-router-dom'
@@ -95,20 +95,16 @@ function EpisodeCard({ episode }) {
             Play Episode
           </Button>
           <div className="flex items-center gap-4">
-            <Button variant="ghost" size="icon" className="h-8 w-8">
-                {/* <SiGooglepodcasts /> */}
-                <PiGooglePodcastsLogoBold />
-                
-            </Button>     
-            <Button variant="ghost" size="icon" className="h-8 w-8">
-              <FaSpotify />
-            </Button>
-            <Button variant="ghost" size="icon" className="h-8 w-8">
+               
+            <span className="">
+              {episode?.channels[0]?.source === 'youtube' ? <FaYoutube size={28} className="text-emerald-500" /> : episode?.channels[0]?.source === 'spotify' ? <FaSpotify className="text-emerald-500" size={28} /> : <FaApple className="text-emerald-500" size={28} />}
+          </span>
+           {/*  <Button variant="ghost" size="icon" className="h-8 w-8">
               <FaPodcast/>
             </Button>
             <Button variant="ghost" size="icon" className="h-8 w-8">
               <FaRss />
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>
@@ -143,7 +139,7 @@ const filteredData = selectedCategory === 'All' ? podcastData :  podcastData?.fi
     <div className="py-12 mt-0 md:mt-[100px] max-w-[800px] mx-auto">
       <div className="mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold mb-6">Listen to the Podcast</h2>
+          <h2 className="text-2xl font-bold mb-6 md:mt-10 md:text-4xl">Listen Watch and Share</h2>
           
           {/* Categories */}
           <div className="flex flex-wrap gap-2 mb-8">
@@ -157,7 +153,7 @@ const filteredData = selectedCategory === 'All' ? podcastData :  podcastData?.fi
               key={category?._id}
               onClick={() => setSelectedCategory(category?.name)}
               //onChange={() => handleCategoryChange(category?.name)}
-              className={`text-sm px-3 py-1 rounded-full ${
+              className={`text-sm px-3 py-1 rounded-full capitalize ${
                 selectedCategory === category?.name
                   ? 'bg-emerald-500 text-white'
                   : 'bg-gray-100 hover:bg-gray-200'

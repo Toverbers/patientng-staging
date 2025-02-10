@@ -79,8 +79,8 @@ useEffect(()=> {
   return (
     <>
       {/* Hero Section */}
-      <section className="overflow-hidden px2 md:px-6 py-10 md:py-24">
-        <div className="px-4">
+      <section className="overflow-hidden px2 md:px-8 py-10 md:py-24">
+        <div className="">
           <div className="grid gap-12 lg:grid-cols-2">
             <div className="flex flex-col justify-center">
               <span className="text-sm font-medium text-emerald-500">
@@ -124,9 +124,9 @@ useEffect(()=> {
       </section>
 
       {/* Campaigns Section */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-gray-50 py-20 md:px-8">
         {/* <LeaderboardComponent /> */}
-        <div className="px-4">
+        <div className="">
         <motion.h2
         variants={SlideRight(0.2)}
         whileInView={"animate"}

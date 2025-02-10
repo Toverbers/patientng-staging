@@ -55,7 +55,7 @@ export function ProfileDetails({ activeTab, setActiveTab, userData, handleImageC
         </div>
         <div className="space-y-2">
           {/* {['Account Information', 'Crowdfunding', 'Hospital Reviews', 'Advocacy'].map((tab) => ( */}
-          {['Account Information', 'Crowdfunding',].map((tab) => (
+          {['Account Information', 'Campaign',].map((tab) => (
             <Button
               key={tab}
               variant={activeTab === tab ? 'outline' : 'ghost'}
@@ -63,7 +63,7 @@ export function ProfileDetails({ activeTab, setActiveTab, userData, handleImageC
               onClick={() => setActiveTab(tab)}
             >
               {tab === "Account Information" ? <User2 /> 
-              : tab === "Crowdfunding" ? <Heart /> 
+              : tab === "Campaign" ? <Heart /> 
               : tab === "Advocacy" ? <Flag />
               : <Hospital />
             }

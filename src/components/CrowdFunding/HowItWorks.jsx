@@ -35,15 +35,15 @@ const HowItWorks = () => {
       description: "Sign up to create an account and fill out the campaign registration form."
     },
     {
-      title: "Promote your campaign",
-      description: "Share verified campaign link to boost visibility and gather Green-Heart likes"
+      title: "Promote your Campaign",
+      description: "Share verified campaign link to boost visibility and gather Green-Heart likes."
     },
     {
       title: "Climb the Leaderboard",
       description: "Campaign with the highest number of Green-Heart likes wins every week."
     },
     {
-      title: "Redeem your prize",
+      title: "Redeem your Prize",
       description: "Winner is directly notified to receive funds or assistance based on campaign details."
     }
   ]
@@ -63,7 +63,7 @@ const HowItWorks = () => {
             whileInView={"animate"}
             initial="initial" 
             className="text-gray-600 mb-8">
-              Learn how crowdfunding helps fund critical health initiatives
+              Learn how campaigns helps fund critical health initiatives
             </motion.p>
             {steps.map((step, index) => (
               <Step key={index} number={index + 1} {...step} />

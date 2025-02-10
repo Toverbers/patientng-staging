@@ -51,7 +51,7 @@ const PodcastWebinarsSection = () => {
 
 
   return (
-    <section className="relative">
+    <section className="relative md:px-8">
       {/* Background Image */}
       <img
         src="/Overlay.jpg"
@@ -61,7 +61,7 @@ const PodcastWebinarsSection = () => {
       
       {/* Content with background color overlay */}
       <div className="relative  py-24">
-        <div className="px-4 ">
+        <div className="">
           {/* Header */}
           <div className="mb-16 flex flex-col md:flex-row gap-4 items-start justify-between">
             <div className="text-white">
