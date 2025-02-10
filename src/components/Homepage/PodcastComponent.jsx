@@ -119,14 +119,17 @@ const PodcastWebinarsSection = () => {
                       <div>
                         <div className="flex flex-col space-y-2 md:space-y-0 md:flex-row md:space-x-5 md:items-center text-sm text-gray-600">
                           <div className="flex items-center space-x-3">
+                            
                             <Calendar className='h-4 w-4' />
                             <p>{moment(episode?.releaseDate).format('DD MMMM YYYY')}</p>
                             </div>
                           <div className="flex items-center space-x-2">
                             <Clock className="h-4 w-4" />
                             <p>{episode?.duration}</p>
+                            
+                            {episode?.channels[0]?.source === 'youtube' ? <FaYoutube size={28} className="text-emerald-500" /> : episode?.channels[0]?.source === 'spotify' ? <FaSpotify className="text-emerald-500" size={28} /> : <FaApple className="text-emerald-500" size={28} />}
                           </div>
-                          {/* {episode?.channels[0]?.source === 'youtube' ? <FaYoutube size={28} className="text-emerald-500" /> : episode?.channels[0]?.source === 'spotify' ? <FaSpotify className="text-emerald-500" size={28} /> : <FaApple className="text-emerald-500" size={28} />} */}
+                           
                         </div>
                         <h4 className="mt-2 font-bold">{episode.title}</h4>
                         <div 
@@ -142,7 +145,7 @@ const PodcastWebinarsSection = () => {
                       </Button>
                       </Link>
 
-                      {episode?.channels[0]?.source === 'youtube' ? <FaYoutube size={28} className="text-emerald-500" /> : episode?.channels[0]?.source === 'spotify' ? <FaSpotify className="text-emerald-500" size={28} /> : <FaApple className="text-emerald-500" size={28} />}
+                      {/* {episode?.channels[0]?.source === 'youtube' ? <FaYoutube size={28} className="text-emerald-500" /> : episode?.channels[0]?.source === 'spotify' ? <FaSpotify className="text-emerald-500" size={28} /> : <FaApple className="text-emerald-500" size={28} />} */}
                       
                       </div>
                       
