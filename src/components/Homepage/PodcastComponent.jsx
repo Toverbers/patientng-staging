@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 import { SlideLeft, SlideRight } from '@/utility/animation';
 import { UsePodcastStore } from '@/store/podcastStore';
 import moment from 'moment';
+import { FaApple, FaSpotify, FaYoutube } from 'react-icons/fa';
 
 const PodcastWebinarsSection = () => {
   const {getAllPodcast, podcastData} = UsePodcastStore()
@@ -51,7 +52,7 @@ const PodcastWebinarsSection = () => {
 
 
   return (
-    <section className="relative md:px-8">
+    <section className="relative px-8">
       {/* Background Image */}
       <img
         src="/Overlay.jpg"
@@ -114,7 +115,7 @@ const PodcastWebinarsSection = () => {
                       alt=""
                       className=" h-40 w-40 rounded-lg object-cover"
                     />
-                    <div className="flex flex-col justify-between">
+                    <div className="flex flex-col justify-between w-full">
                       <div>
                         <div className="flex flex-col space-y-2 md:space-y-0 md:flex-row md:space-x-5 md:items-center text-sm text-gray-600">
                           <div className="flex items-center space-x-3">
@@ -125,6 +126,7 @@ const PodcastWebinarsSection = () => {
                             <Clock className="h-4 w-4" />
                             <p>{episode?.duration}</p>
                           </div>
+                          {/* {episode?.channels[0]?.source === 'youtube' ? <FaYoutube size={28} className="text-emerald-500" /> : episode?.channels[0]?.source === 'spotify' ? <FaSpotify className="text-emerald-500" size={28} /> : <FaApple className="text-emerald-500" size={28} />} */}
                         </div>
                         <h4 className="mt-2 font-bold">{episode.title}</h4>
                         <div 
@@ -132,12 +134,18 @@ const PodcastWebinarsSection = () => {
                           className=" text-gray-600 text-sm"
                         />
                       </div>
+                      <div className='flex justify-between items-center'>
                       <Link to={`/podcast/${episode._id}`}>
                       <Button className="w-fit bg-emerald-500 hover:bg-emerald-600">
                         <Play className="mr-2 h-4 w-4" />
                         Play Episode
                       </Button>
                       </Link>
+
+                      {episode?.channels[0]?.source === 'youtube' ? <FaYoutube size={28} className="text-emerald-500" /> : episode?.channels[0]?.source === 'spotify' ? <FaSpotify className="text-emerald-500" size={28} /> : <FaApple className="text-emerald-500" size={28} />}
+                      
+                      </div>
+                      
                     </div>
                   </CardContent>
                 </motion.Card>

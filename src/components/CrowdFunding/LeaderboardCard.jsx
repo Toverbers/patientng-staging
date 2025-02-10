@@ -17,9 +17,9 @@ const LeaderboardCard = ({ image, title, raised, goal, description, isLiked, lik
   }
   
   return (
-    <Link to={`/campaigns/${campaign?._id}`} className="block">
+    <Link to={`/campaigns/${campaign?._id}`} className="">
       <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow p-4">
-        <div className="flex">
+        <div className="flex ">
           <span className='flex-shrink-0 w-[24px] h-[24px] flex justify-center items-center rounded-full bg-green-500 text-white mr-4 mt-1'>{index + 1}</span>
           <div className="flex-shrink-0 mr-4 relative">
             <img crossOrigin='anonymous' src={`${import.meta.env.VITE_MAIN_URL}/${campaign?.image}`} alt={title} className="w-14 h-14 object-cover rounded-lg" />

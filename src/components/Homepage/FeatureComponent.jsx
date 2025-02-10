@@ -14,21 +14,21 @@ const FeatureSection = () => {
   ];
 
   return (
-    <section className="bg-gray-50 py-24">
-      <div className="container mx-auto px-4">
+    <section className="bg-gray-50 py-5 md:py-24 px-8">
+      <div className=" mx-auto ">
         <div className="grid gap-12 lg:grid-cols-2">
           {/* Left side - Image placeholder */}
           <motion.div
           variants={SlideRight(0.3)}
           whileInView={"animate"}
           initial="initial" 
-          className="relative h-[600px] overflow-hidden rounded-3xl">
+          className="relative md:h-[600px] overflow-hidden rounded-3xl">
             {/* You can replace this with an actual image */}
             <img src='/hallway.jpg' alt='steps' className='object-cover w-full' />
           </motion.div>
 
           {/* Right side - Content */}
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col justify-center ">
             <span className="text-sm font-medium text-emerald-500">
             Patient Complaints
             </span>

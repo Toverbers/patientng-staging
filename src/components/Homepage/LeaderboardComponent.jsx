@@ -180,7 +180,7 @@ const {getAllCampaigns, campaignData} = UseCampaignStore()
         </Swiper>
         </div> */}
 
-        <div className='  border-l border-l-[#f8f8f8] p-[20px] flex flex-col space-y-3'>
+        <div className='w-full md:w-auto md:border-l md:border-l-[#f8f8f8] p-[20px] flex flex-col space-y-3'>
         <motion.h2 
         variants={SlideDown(0.1)}
         whileInView={"animate"}
@@ -191,7 +191,9 @@ const {getAllCampaigns, campaignData} = UseCampaignStore()
                 variants={SlideUp(0.3)}
                 whileInView={"animate"}
                 initial="initial"
-                key={index}><LeaderboardCard
+                className=''
+                key={index}>
+                  <LeaderboardCard
                 key={index}
                 index={index}
                 campaign={campaign}

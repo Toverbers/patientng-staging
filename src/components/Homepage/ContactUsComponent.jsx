@@ -6,15 +6,16 @@ import { SlideDown, SlideUp } from '@/utility/animation'
 
 export const ContactUsSection = () => {
   return (
-    <div className='py-12'>
+    <div className='py-12 bg-gray-50 bg=[#F7F7F8]'>
         <div className='px-8'>
-            <div className='pt-4 flex flex-col items-center bg-gray-50 bg=[#F7F7F8] w-full gap-8'>
+            <div className='pt-4 flex flex-col items-center  w-full gap-8'>
                 <motion.div 
                 variants={SlideDown(0.3)}
                 whileInView={"animate"}
                 initial="initial" 
                 className='flex items-center gap-2 group'>
-                    <Logo />
+                    {/* <Logo /> */}
+                    <img  src="/logo.png" alt="logo" className='w-6 h-6' />
                     <span className='text-xl font-semibold'>Patient.ng</span>
                 </motion.div>
                 <motion.div
@@ -22,7 +23,7 @@ export const ContactUsSection = () => {
                 whileInView={"animate"}
                 initial="initial" 
                 >
-                    <h2 className='text-4xl text-center'>lunch your campaign today</h2>
+                    <h2 className='text-4xl text-center'>launch your campaign today</h2>
                     <p className='text-lg text-center'>
                         We believe in putting patients at the center of their healthcare journey.
                     </p>

@@ -79,10 +79,11 @@ useEffect(()=> {
   return (
     <>
       {/* Hero Section */}
-      <section className="overflow-hidden px2 md:px-8 py-10 md:py-24">
+      <section className="overflow-hidden px-8 py-10 md:py-24">
         <div className="">
-          <div className="grid gap-12 lg:grid-cols-2">
-            <div className="flex flex-col justify-center">
+          {/* <div className=" grid gap-12 lg:grid-cols-2"> */}
+          <div className=" flex flex-col md:flex-row">
+            <div className="w-full md:w-[65%] flex flex-col justify-center">
               <span className="text-sm font-medium text-emerald-500">
                 Campaigns
               </span>
@@ -90,7 +91,7 @@ useEffect(()=> {
               variants={SlideRight(0.2)}
             whileInView={"animate"}
             initial="initial" 
-              className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">
+              className="mt-4 text-3xl font-bold tracking-tight md:text-5xl">
                 Promote Advocacy Initiatives, Make a Difference
               </motion.h2>
               <motion.p  
@@ -111,7 +112,7 @@ useEffect(()=> {
             </Button>
             </Link>
             </div>
-            <div className="relative flex justify-end">
+            <div className="w-full md:w-[35%] relative flex flex-row md:justify-end">
               {/* <img
                 src="/dental checkup.png"
                 alt="Healthcare provider with child patient"
@@ -124,7 +125,7 @@ useEffect(()=> {
       </section>
 
       {/* Campaigns Section */}
-      <section className="bg-gray-50 py-20 md:px-8">
+      <section className="bg-gray-50 py-20 px-8">
         {/* <LeaderboardComponent /> */}
         <div className="">
         <motion.h2
