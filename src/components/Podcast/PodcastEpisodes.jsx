@@ -67,7 +67,7 @@ function EpisodeCard({ episode }) {
       <img
         crossOrigin='anonymous' src={`${import.meta.env.VITE_MAIN_URL}/${episode?.image}`}
         alt={`Episode ${episode.number} thumbnail`}
-        className="rounded-lg object-cover h-32 w-32 md:h-44 md:w-44"
+        className="rounded-lg object-cover h-16 w-16 md:h-44 md:w-44"
       />
       <div className="flex-1 flex flex-col gap-2 p-2 justify-between">
         <div className="flex items-center gap-2 text-sm text-gray-500 mb-1">
@@ -82,7 +82,7 @@ function EpisodeCard({ episode }) {
           {episode?.summary?.slice(0,100)}
         </p> */}
         <div 
-            dangerouslySetInnerHTML={{ __html: episode?.summary?.slice(0,100) }}
+            dangerouslySetInnerHTML={{ __html: episode?.summary?.slice(0,120) + "......" }}
             className="text-sm text-gray-600 mb-3 line-clamp-2"
           />
         <div className="flex items-center justify-between">

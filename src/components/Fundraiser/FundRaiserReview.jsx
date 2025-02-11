@@ -114,7 +114,7 @@ const FundraiserReview = ({ formData }) => {
      open={openModal}
      setOpen={()=> setOpenModal(false)}
      title="Congratulations!!"
-     description="Your campaign has successfully been cretead. Please check your profile anytime soon to know the status of your campaign"
+     description="Your campaign has been submitted and pending approval. Check your profile for updates."
      handleClick={()=> navigate('/crowdfunding')}
      />
     

@@ -12,7 +12,7 @@ export function AboutHero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/about.png"
+          src="/about.jpg"
           alt="Hero background"
           className="w-full h-full object-cover brightness-[0.75]"
         />

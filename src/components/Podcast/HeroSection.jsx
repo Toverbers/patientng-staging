@@ -28,12 +28,12 @@ export default function HeroSection() {
   ]
 
   return (
-    <div className="relative bg-emerald-950 text-white py-16 h-[110vh]">
+    <div className="relative bg-emerald-950 text-white py-16 md:h-[110vh]">
       <div className="mx-auto px-4">
         <div className="max-w-6xl mx-auto space-y-12">
           {/* Header Content */}
           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
-            <h1 className="text-5xl lg:text-6xl font-bold leading-tight max-w-2xl">
+            <h1 className="text-3xl lg:text-6xl font-bold leading-tight max-w-2xl">
             Find and Listen to your{' '}
               <br />
               favorite{' '}
