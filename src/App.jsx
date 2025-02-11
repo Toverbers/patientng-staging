@@ -30,6 +30,7 @@ import useAuthStore from './store/authStore';
 import Contact from './pages/_contact/Contact';
 import CookieConsent from './components/cookies/CookieConsent';
 import Terms from './pages/Terms';
+import About from './pages/_about/About';
 //import { HelmetProvider } from 'react-helmet-async';
 
 
@@ -104,6 +105,7 @@ function App() {
         <Route path="/advocacy" element={<Advocacy/>} />
         <Route path="/awards" element={<AwardsPage />} /> 
         <Route path="/contact" element={<Contact />} /> 
+        <Route path="/about" element={<About />} /> 
         <Route path="/terms-and-condition" element={<Terms />} /> 
       </Routes>
 

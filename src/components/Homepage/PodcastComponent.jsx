@@ -66,8 +66,11 @@ const PodcastWebinarsSection = () => {
           {/* Header */}
           <div className="mb-16 flex flex-col md:flex-row gap-4 items-start justify-between">
             <div className="text-white">
-              <span className="text-sm font-medium text-emerald-500">
+              {/* <span className="text-sm font-medium text-emerald-500">
                 Podcast & webinars
+              </span> */}
+              <span className="text-sm font-medium text-emerald-500">
+                Podcasts
               </span>
               <motion.h2
               variants={SlideLeft(0.3)}
@@ -89,7 +92,7 @@ const PodcastWebinarsSection = () => {
               variant="outline" 
               className="group border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-white"
             >
-              See Podcasts & Webinars
+              See More Podcasts
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
             </Link>

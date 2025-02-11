@@ -63,7 +63,7 @@ const CookieConsent = () => {
 
   return (
     <>
-      <div className="fixed bottom-0 left-0 right-0 bg-white p-6 shadow-lg border-t">
+      <div className="fixed bottom-0 left-0 right-0 bg-white p-6 shadow-lg border-t z-50">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-2xl font-semibold text-emerald-400 mb-4">
             We care about your privacy

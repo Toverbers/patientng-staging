@@ -165,13 +165,13 @@ const filteredData = selectedCategory === 'All' ? podcastData :  podcastData?.fi
           </div>
 
           {/* Episodes List */}
-          <div className="space-y-6 my-4">
+          {/* <div className="space-y-6 my-4">
           {filteredData?.slice(0,2).map((episode) => (
             <EpisodeCard key={episode._id} episode={episode} />
           ))}
           </div>
-          {/* Newsletter section */}
-            <NewsletterSection />
+          
+            <NewsletterSection /> */}
 
         
         {/* Second half of episodes */}
