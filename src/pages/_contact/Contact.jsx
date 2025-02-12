@@ -42,7 +42,7 @@ const Contact = () => {
           Contact <span className="text-emerald-500">Us</span>
           </h1>
           <p className="mx-auto mt-6 max-w-[600px] text-gray-600 md:text-lg">
-          We love to hear from you
+          We would love to hear from you
           </p>
           <div className="mt-8 flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 items-center justify-center">
             <div className='flex md:flex items-center space-x-2 cursor-pointer border border-emerald-500 rounded-sm p-2 w-[80%] md:w-[250px]'>
