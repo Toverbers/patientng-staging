@@ -19,18 +19,18 @@ const AboutInfo = () => {
              variants={SlideLeft(0.2)}
              whileInView={"animate"}
              initial="initial"
-            className='text-base'>We understand patient realities in our country and share their stories through our campaigns to help them find the support they need. We facilitate a community where patients feel heard, supported, and empowered to take charge of their own healthcare experience.</motion.p>
+            className='text-base'>Many Nigerians face difficulties funding their medical treatments due to inadequate health insurance coverage and high out-of-pocket costs.</motion.p>
             <motion.p
              variants={SlideLeft(0.2)}
              whileInView={"animate"}
              initial="initial"
-            className='text-base'>We collaborate with healthcare professionals, organizations and communities to drive sustainable solutions that enhance patient experiences in Nigeria.</motion.p>
+            className='text-base'>Our Campaign feature allows individuals to create and promote verified patient campaigns for urgent healthcare financial needs. The platform enables users to share their stories, gather support from their network, and win weekly funding based on the number of Green-heart likes their campaign receives.</motion.p>
            
             <motion.p
              variants={SlideLeft(0.2)}
              whileInView={"animate"}
              initial="initial"
-            className='text-base'>We help members find data-driven insights based on their experiences. Giving us feedback can help others make informed decisions about their healthcare provider.</motion.p>
+            className='text-base'>We work closely with hospitals, pharmacies, NGO’s and corporate sponsors to deliver sustainable support solutions that improve health outcomes in Nigeria.</motion.p>
             
             <div className='my-5'>
             <CustomButton className=" bg-emerald-500 hover:bg-emerald-600 hover:text-white border-none ">

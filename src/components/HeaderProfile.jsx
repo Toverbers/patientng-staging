@@ -13,6 +13,7 @@ const HeaderProfile = ({ user, handleLogout }) => {
 
   return (
     <div className="flex items-center justify-between py-2">
+      <Link to="/account">
       <div className="flex items-center gap-3">
         <Avatar className="h-10 w-10">
         <img crossOrigin='anonymous'  src={ `${import.meta.env.VITE_MAIN_URL}/${user?.image}`} className="rounded-full" />
@@ -20,6 +21,8 @@ const HeaderProfile = ({ user, handleLogout }) => {
         </Avatar>
         <span className="text-sm font-medium">{user?.firstName} {user?.lastName}</span>
       </div>
+      </Link>
+
       <Link to={'/login'}>
       <Button
         variant="ghost"

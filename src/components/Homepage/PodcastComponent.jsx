@@ -116,7 +116,7 @@ const PodcastWebinarsSection = () => {
                     <img
                       crossOrigin='anonymous' src={`${import.meta.env.VITE_MAIN_URL}/${episode?.image}`}
                       alt=""
-                      className=" h-40 w-40 rounded-lg object-cover"
+                      className="w-20 h-20 md:h-28 md:w-28 lg:h-40 lg:w-40 rounded-lg object-cover"
                     />
                     <div className="flex flex-col justify-between w-full">
                       <div>
@@ -136,8 +136,8 @@ const PodcastWebinarsSection = () => {
                         </div>
                         <h4 className="mt-2 font-bold">{episode.title}</h4>
                         <div 
-                          dangerouslySetInnerHTML={{ __html: episode?.summary?.slice(0,40) }}
-                          className=" text-gray-600 text-sm"
+                          dangerouslySetInnerHTML={{ __html: episode?.summary?.slice(0,100) + '...' }}
+                          className=" text-gray-600 text-sm mb-3"
                         />
                       </div>
                       <div className='flex justify-between items-center'>

@@ -34,7 +34,7 @@ export function AboutHero() {
           whileInView={"animate"}
           initial="initial"
           className="text-lg text-gray-200 text-center ">
-          We are dedicated team of advocates facilitate a patient community where members feel supported, heard and empowered to make informed decisions that improve their healthcare outcomes.
+          We are more than just a platform; we're a movement. A movement that believes in the power of community, the importance of advocacy, and the transformative potential of shared patient experiences.
           </motion.p>
 
           <motion.div

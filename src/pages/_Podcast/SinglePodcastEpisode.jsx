@@ -155,8 +155,8 @@ export default function SingleEpisode() {
           </div>
 
           {/* Newsletter and Social Links */}
-          <div className="text-gray-600 mt-16 p-5 border border-emerald-200 rounded-lg">
-            <p className="mb-2"> Welcome to iPatient Diaries, powered by {' '}<a href="https/patient.ng/signup" className="text-emerald-500 hover:underline">patient.ng</a>.</p>
+          <div className="text-gray-600 mt-16 p-5 border border-emerald-200 flex flex-col space-y-4 rounded-lg">
+            <p className=""> Welcome to iPatient Diaries, powered by {' '}<a href="https/patient.ng/signup" className="text-emerald-500 hover:underline">patient.ng</a>.</p>
             <p>Each week, we narrate untold stories of patient experiences and the realities of healthcare professionals standing strongly by their side.</p>
             <p>From trials to triumphs, we amplify authentic voices that drive real empathy and advocacy for meaningful change.</p>
             <p>Register at{' '}<a href="https/patient.ng/signup" className="text-emerald-500 hover:underline">patient.ng</a> to join our grassroots advocacy movement for a compassionate, supportive and equitable healthcare system in Nigeria.</p>

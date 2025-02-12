@@ -16,7 +16,7 @@ const Terms = () => {
     <>
      <Header />
      <div className='my-10 bg-white max-w-[90%] mx-auto py-50 px-10 pt-[100px]'>
-      <h2 className='text-3xl font-medium'>Terms and Condition</h2>
+      <h2 className='text-3xl font-medium'>Terms and Conditions</h2>
       <p className='text-base'><span className='font-medium'>Updated: </span>{websiteData?.termsAndCondition?.dateUpdated}</p>
 
       <div 
