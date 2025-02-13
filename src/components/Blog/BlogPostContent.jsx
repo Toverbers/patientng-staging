@@ -137,7 +137,7 @@ export default function BlogPostContent({blogData, getBlogs}) {
       try {
         await navigator.share({
           title: 'Check out the latest Blog!',
-          text: `${blogData?.content?.slice(0,50)}...`,
+          text: `${blogData?.blog.content?.slice(0,50)}...`,
           url: window.location.href, // Current page URL
         });
         console.log('Content shared successfully');
