@@ -132,12 +132,20 @@ export default function BlogPostContent({blogData, getBlogs}) {
     getBlogs({id: blogData?.blog?.urlSlug?.slice(1)})
   }
 
+  const convertToPlainText = (html) => {
+    const tempElement = document.createElement("div");
+    tempElement.innerHTML = html;
+    return tempElement.innerText || tempElement.textContent;
+  };
+
+  
+
   const handleShare = async () => {
     if (navigator.share) {
       try {
         await navigator.share({
           title: 'Check out the latest Blog!',
-          text: `${blogData?.blog.content?.slice(0,50)}...`,
+          text: convertToPlainText(`${blogData?.blog.content?.slice(0,50)}...`),
           url: window.location.href, // Current page URL
         });
         console.log('Content shared successfully');
