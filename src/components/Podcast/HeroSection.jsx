@@ -45,7 +45,7 @@ export default function HeroSection() {
             {/* Testimonial */}
             <div className="lg:max-w-sm">
               <p className="text-lg mb-4">
-              My name is Slau and I’ve faced more challenges in my health journey than I ever thought possible. Diagnosed with a rare autoimmune disease at the age of 25, I was suddenly thrust into a world I barely understood
+              Each week, we narrate untold stories of patient experiences and the realities of healthcare professionals standing strongly by their side. From trials to triumphs, we amplify authentic voices that drive real empathy and advocacy for meaningful change.
               </p>
               <div className="flex items-center">
                 <AvatarGroup avatars={avatars} />
