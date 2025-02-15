@@ -6,6 +6,7 @@ import { CustomButton } from '@/components/CustomButton'
 import { Link, useNavigate } from 'react-router'
 import useAuthStore from '@/store/authStore'
 import PasswordInputField from '@/components/PasswordInputField'
+import { AlertCircle } from 'lucide-react'
 
 export const LoginPage = () => {
   const {login, user} = useAuthStore()
@@ -66,7 +67,14 @@ export const LoginPage = () => {
             placeholder="password"
             value={formData.password}
             onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+            caution={
+              <p className='text-xs text-emerald-700 flex items-center -mt-2'>
+                <span className='mr-3'><AlertCircle size={16} /></span>
+                Password must contain at least one uppercase letter, lowercase, number, and be longer than 6
+              </p>
+            }
           />
+          
 
           <p className='my-3'>
           <Link to="/reset-password" className="text-emerald-500 hover:text-emerald-600 ">

@@ -13,6 +13,7 @@ const PasswordInputField = ({
   value,
   isDisabled,
   errorMessage,
+  caution,
   ...props
 }) => {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -86,10 +87,13 @@ const PasswordInputField = ({
             </svg>
           )}
         </button>
+        
         {errorMessage && (
           <p className="text-red-500 text-xs mt-1">{errorMessage}</p>
         )}
+        
       </div>
+      {caution}
     </div>
   );
 };
