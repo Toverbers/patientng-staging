@@ -3,15 +3,15 @@ import AuthLayout from '@/components/Auth/AuthLayout'
 import { CustomButton } from '@/components/CustomButton'
 import { FormInput } from '@/components/FormInput'
 import PasswordInputField from '@/components/PasswordInputField'
-import { Button } from '@/components/ui/button'
 import { Label } from '@/components/ui/label'
 import { Switch } from '@/components/ui/switch'
 import useAuthStore from '@/store/authStore'
 import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { AlertCircle } from 'lucide-react'
 
 export default function RegisterPage() {
-  const {register, regSuccess, resendOtp, sendOtp} = useAuthStore()
+  const { resendOtp, sendOtp} = useAuthStore()
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -154,6 +154,12 @@ export default function RegisterPage() {
            name="password"
            value={formData?.password}
            onChange= {handleInputChange}
+           caution={
+            <p className='text-xs text-emerald-700 flex items-center -mt-2'>
+              <span className='mr-3'><AlertCircle size={16} /></span>
+              Password must contain at least one uppercase letter, lowercase, number, and be longer than 6
+            </p>
+          }
            />
 
        <div className="flex items-center space-x-2 mt-4 justify-center">

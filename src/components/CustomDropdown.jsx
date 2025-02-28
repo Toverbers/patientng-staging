@@ -15,7 +15,7 @@ export function CustomDropdown({ buttonText, menuItems }) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="none" className="border-0 ring-offset-0 focus-visible:outline-none focus-visible:ring-0  focus-visible:ring-offset-0 flex pl-1">
+        <Button variant="none" className="border-0 ring-offset-0 focus-visible:outline-none focus-visible:ring-0  focus-visible:ring-offset-0 flex pl-1 text-base font-normal">
           {buttonText} <ChevronDown className="ml-0 h-4 w-4" />
         </Button>
       </DropdownMenuTrigger>
