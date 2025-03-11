@@ -83,7 +83,7 @@ export default function CampaignDetails() {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: 'Support my patient campaign',
+          title: 'Please Register & Like to Support my Campaign',
           //text: 'This is a great resource for React developers.',
           text: singleCampaign?.title,
           url: window.location.href, // Current page URL

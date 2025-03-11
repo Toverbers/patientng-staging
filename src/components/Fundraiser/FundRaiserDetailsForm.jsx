@@ -40,9 +40,9 @@ const duration = [
 ]
 
 const categories = [
-  "Medical expenses",
-  "Wellness",
-  "Diseases",
+  "Hospital Bill Support",
+  "Medication/Drug Expenses",
+  "Emergency Treatment/Surgery",
 ]
 
 const FundraiserDetailsForm = ({ formData, updateFormData }) => {

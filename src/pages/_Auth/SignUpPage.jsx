@@ -157,7 +157,7 @@ export default function RegisterPage() {
            caution={
             <p className='text-xs text-emerald-700 flex items-center -mt-2'>
               <span className='mr-3'><AlertCircle size={16} /></span>
-              Password must contain at least one uppercase letter, lowercase, number, and be longer than 6
+              Password must contain at least one uppercase letter, lowercase, number, and be longer than 6 characters
             </p>
           }
            />

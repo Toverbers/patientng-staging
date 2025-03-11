@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Upload, X } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import toast from 'react-hot-toast'
 
 const ImageFileUploader = ({ onImageChange }) => {
   const [selectedImage, setSelectedImage] = useState(null)
@@ -9,12 +10,20 @@ const ImageFileUploader = ({ onImageChange }) => {
   const handleFileChange = (e) => {
     const file = e.target.files[0]
     if (file) {
-      const reader = new FileReader()
+      const fileSizeKB = file.size / 1024; // Convert size to KB
+      if (fileSizeKB > 850){
+        toast.error("File size exceeds 850 KB. Please choose a smaller image.")
+        setSelectedImage(null)
+        onImageChange(null)
+      } else{
+        const reader = new FileReader()
       reader.onload = (e) => {
         setSelectedImage(e.target.result)
         onImageChange(file)
       }
       reader.readAsDataURL(file)
+      }
+      
     }
   }
 
@@ -44,7 +53,7 @@ const ImageFileUploader = ({ onImageChange }) => {
             <Upload className="h-5 w-5 text-gray-600" />
           </div>
           <p className="mt-4 mb-2 text-gray-900">Drag or upload a photo here</p>
-          <p className="mb-4 text-sm text-gray-500">File should be in (.png or Jpeg) format</p>
+          <p className="mb-4 text-sm text-gray-500">File should be in (.png or Jpeg) format and not more than 1MB</p>
           <Input
             type="file"
             accept="image/png, image/jpeg"
