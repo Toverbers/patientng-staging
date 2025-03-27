@@ -47,7 +47,7 @@ const TimelineSection = () => {
         whileInView={"animate"}
         initial="initial"  
         className="mt-4 text-3xl font-bold text-white md:text-5xl md:max-w-6xl">
-        Patient.ng is a public-health advocacy, amplifying patient voices in Nigeria.
+        Patient.ng is an online community, amplifying patient voices in Nigeria.
         </motion.h2>
         
         <motion.p
